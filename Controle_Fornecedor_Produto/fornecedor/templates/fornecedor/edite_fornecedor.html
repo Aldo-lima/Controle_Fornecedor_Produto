@@ -1,0 +1,16 @@
+{% extends "core/includes/base.html"%}
+{% load bootstrap %}
+{% block main %}
+  <form method="post">
+      {% csrf_token %}
+       {{form|bootstrap}}
+       <br> <br>
+       {{formset.managemnt_form}}
+       {% for item_estoque_form in formset %}
+       {{formset|bootstrap}}
+       {% endfor %}
+       <br> <br>
+      <button>salvar</button>
+  </form>
+
+{% endblock %}

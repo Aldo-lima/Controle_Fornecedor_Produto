@@ -1,3 +1,27 @@
 {% extends "core/includes/base.html"%}
-{%{% endblock %}
 {% block main %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Razão Social</th>
+      <th scope="col">Detalhes</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for fornecedor in fornecedores %}
+
+    <tr>
+      <th scope="row">{{fornecedor.id}}</th>
+      <td>{{fornecedor.nome}}</td>
+      <td>{{fornecedor.nome_r}}</td>
+      <td><a href="{% url 'fornecedor_ver' fornecedor.id %}" class="buton ">ver</a>@mdo</td>
+    </tr>
+
+
+   {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
