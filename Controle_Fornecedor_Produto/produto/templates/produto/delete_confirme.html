@@ -1,0 +1,9 @@
+{% extends "core/includes/base.html"%}
+{% load bootstrap %}
+{% block main %}
+        <h2>tem certeza que deseja deletar: {{produto.produto}}</h2>
+        <form method="POST" action="">
+          {% csrf_token %}
+        <button class="btn btn-danger" type="submit">deletar</button>
+       </form>
+{% endblock %}

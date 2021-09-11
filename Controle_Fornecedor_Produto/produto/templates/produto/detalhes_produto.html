@@ -1,0 +1,6 @@
+{% extends "core/includes/base.html"%}
+{% block main %}
+{{produto.nome}}
+<a href="{% url 'produto_edite' produto.id %}" class="buton ">editar</a>
+<a href="{% url 'produto_delete' produto.id %}" class="buton ">deletar</a>
+{% endblock %}
