@@ -1,7 +1,14 @@
 {% extends "core/includes/base.html"%}
 {% load bootstrap %}
 {% block main %}
-  <form method="post">
+
+
+<div class="card" id="card_fornecedor_edite">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+ <form method="post">
       {% csrf_token %}
        {{form|bootstrap}}
        <br> <br>
@@ -12,5 +19,9 @@
        <br> <br>
       <button>salvar</button>
   </form>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
 
 {% endblock %}

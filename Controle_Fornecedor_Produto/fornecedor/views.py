@@ -76,7 +76,8 @@ def fornecedorEditar(request, id):
 
 def fornecedorVer(request, id):
     fornecedor = Fornecedor.objects.get(id=id)
-    return render(request, 'fornecedor/detalhes_fornecedor.html', {'fornecedor': fornecedor})
+    return render(request, 'fornecedor/detalhes_fornecedor.html', {'fornecedor':fornecedor})
+
 
 
 def fornecedorDetete(request, id):
